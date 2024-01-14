@@ -1,0 +1,423 @@
+ERROR - 2024-01-05 00:38:14 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'db_musica', 3306, '', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(764): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(1410): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(1429): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(764): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+ERROR - 2024-01-05 00:39:53 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171129_LikedSong.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\LikedSong->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 00:41:56 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171129_LikedSong.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\LikedSong->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 00:43:02 --> mysqli_sql_exception: Can't create table `db_musica`.`playlist_items` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171217_PlaylistItems.php(40): CodeIgniter\Database\Forge->createTable('playlist_items')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\PlaylistItems->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 00:43:36 --> mysqli_sql_exception: Can't create table `db_musica`.`playlist_items` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171217_PlaylistItems.php(40): CodeIgniter\Database\Forge->createTable('playlist_items')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\PlaylistItems->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 00:43:54 --> mysqli_sql_exception: Can't create table `db_musica`.`playlist_items` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171217_PlaylistItems.php(40): CodeIgniter\Database\Forge->createTable('playlist_items')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\PlaylistItems->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 00:44:46 --> mysqli_sql_exception: Can't create table `db_musica`.`playlist_items` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `p...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171217_PlaylistItems.php(40): CodeIgniter\Database\Forge->createTable('playlist_items')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\PlaylistItems->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 00:46:03 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171129_LikedSong.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\LikedSong->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:08:56 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171129_LikedSong.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\LikedSong->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:31:15 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-05-013043_TblLikedSongs.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\TblLikedSongs->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:32:24 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-05-013043_TblLikedSongs.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\TblLikedSongs->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:32:36 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-05-013043_TblLikedSongs.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\TblLikedSongs->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:33:03 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-05-013043_TblLikedSongs.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\TblLikedSongs->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:35:58 --> mysqli_sql_exception: Table 'liked_songs' already exists in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171129_LikedSong.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\LikedSong->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2024-01-05 01:36:12 --> mysqli_sql_exception: Can't create table `db_musica`.`liked_songs` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MySQLi\Connection.php(306): mysqli->query('CREATE TABLE `l...', 0)
+#1 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `l...')
+#2 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `l...')
+#3 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `l...')
+#4 C:\xampp\xampp8160\htdocs\musica_ci443\app\Database\Migrations\2024-01-04-171129_LikedSong.php(40): CodeIgniter\Database\Forge->createTable('liked_songs')
+#5 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(873): App\Database\Migrations\LikedSong->up()
+#6 C:\xampp\xampp8160\htdocs\musica_ci443\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\xampp8160\htdocs\musica_ci443\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\xampp8160\htdocs\musica_ci443\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\xampp8160\htdocs\musica_ci443\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2024-01-05 07:02:02 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('requestData', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:02:02 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('requestData', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:15:34 --> Too few arguments to function App\Controllers\AJAXRequest::storeLove(), 0 passed in C:\xampp\xampp8160\htdocs\musica_ci443\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\AJAXRequest.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:18:10 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('requestDataNextPrev', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:18:33 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('requestData', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:27:44 --> Too few arguments to function App\Controllers\AJAXRequest::storeLove(), 0 passed in C:\xampp\xampp8160\htdocs\musica_ci443\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\AJAXRequest.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:33:48 --> Too few arguments to function App\Controllers\AJAXRequest::storeLove(), 0 passed in C:\xampp\xampp8160\htdocs\musica_ci443\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\AJAXRequest.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:33:50 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:33:51 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:33:51 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:34:08 --> Too few arguments to function App\Controllers\AJAXRequest::storeLove(), 0 passed in C:\xampp\xampp8160\htdocs\musica_ci443\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\AJAXRequest.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:38:26 --> Too few arguments to function App\Controllers\AJAXRequest::storeLove(), 0 passed in C:\xampp\xampp8160\htdocs\musica_ci443\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\AJAXRequest.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:39:21 --> Too few arguments to function App\Controllers\AJAXRequest::storeLove(), 0 passed in C:\xampp\xampp8160\htdocs\musica_ci443\system\CodeIgniter.php on line 942 and exactly 1 expected
+in APPPATH\Controllers\AJAXRequest.php on line 47.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 07:40:55 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 08:34:20 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 08:35:54 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 10:15:09 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 10:15:12 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 10:22:30 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 10:22:48 --> The action you requested is not allowed.
+in SYSTEMPATH\Security\Security.php on line 300.
+ 1 SYSTEMPATH\Security\Security.php(300): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(56): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(186): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(474): CodeIgniter\Filters\Filters->run('storeLove', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 12:14:27 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\AJAXRequest.php on line 54.
+ 1 APPPATH\Controllers\AJAXRequest.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\app\\Controllers\\AJAXRequest.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 12:15:52 --> Trying to access array offset on value of type int
+in APPPATH\Controllers\AJAXRequest.php on line 55.
+ 1 APPPATH\Controllers\AJAXRequest.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\app\\Controllers\\AJAXRequest.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 12:19:12 --> json_decode(): Argument #1 ($json) must be of type string, stdClass given
+in APPPATH\Controllers\AJAXRequest.php on line 65.
+ 1 APPPATH\Controllers\AJAXRequest.php(65): json_decode(Object(stdClass), true)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
+CRITICAL - 2024-01-05 12:26:21 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\AJAXRequest.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AJAXRequest->storeLove()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AJAXRequest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\xampp8160\\htdocs\\musica_ci443\\public\\index.php')
